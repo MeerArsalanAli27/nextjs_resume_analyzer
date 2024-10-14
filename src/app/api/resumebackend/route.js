@@ -18,7 +18,7 @@ export async function POST(NextRequest){
   const data=await NextRequest.formData();
   let parsedText='';
   let analysistext;
-  let result;
+
 
 
 const getfile=data.get('sendfile');

@@ -18,7 +18,7 @@ export const mongoconnect=async()=>{
 export const mongoDisconnect = async () => {
   console.log("Disconnecting from MongoDB...");
   try {
-      await mongoose.disconnect('mongodb+srv://arsalan27:arsalan27@cluster0.suwawfi.mongodb.net/arsalan27');
+      await mongoose.disconnect(process.env.MONGO_URLL);
       console.log("Successfully disconnected from MongoDB.");
   } catch (error) {
       console.error("Error disconnecting from MongoDB:", error);
